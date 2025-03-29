@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -96,8 +97,33 @@
             background-color: #333;
             color: #fff;
         }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .image-grid img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        /* Anchor Link Styling */
+        .anchor-link {
+            color: #ff6f61;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .anchor-link:hover {
+            text-decoration: underline;
+            /* Optional hover effect */
+        }
     </style>
 </head>
+
 <body>
     <header>
         <h1>RASPA Publications</h1>
@@ -112,10 +138,21 @@
     <section class="hero">
         <h2>Pixel Art Examples</h2>
         <p>Try these examples in your Pixel Art Journal Sketch Notebook</p>
+        <p>Remember that your PixelArt journal book contains grids of multiple sizes, choose the right one below:</p>
+        <a href="#pixel-samples" class="anchor-link">Go to 32 x 32 Pixel Grid Samples</a>
+    </section>
+
+    <section class="hero" id="pixel-samples">
+        <h2>32 pixels samples</h2>
+        <p>Try these in your 32 pixel grids</p>
+        <div class="image-grid">
+            <img src="images/ByeKitty.png" alt="Bye Kitty">
+        </div>
     </section>
 
     <footer>
         &copy; 2025 RASPA Publications. All rights reserved.
     </footer>
 </body>
+
 </html>
