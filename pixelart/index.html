@@ -15,122 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RASPA Publications Pixel Art Book</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        header p {
-            font-size: 1rem;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #444;
-            padding: 0.5rem 0;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 1rem;
-            font-weight: bold;
-            transition: color 0.3s ease-in-out;
-        }
-
-        nav a:hover {
-            color: #ff6f61;
-        }
-
-        .hero {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: calc(100vh - 150px);
-            text-align: center;
-        }
-
-        .hero h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-
-        .hero button {
-            padding: 0.8rem 2rem;
-            background-color: #ff6f61;
-            border: none;
-            color: #fff;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
-        }
-
-        .hero button:hover {
-            background-color: #e65b50;
-            transform: scale(1.05);
-        }
-
-        footer {
-            text-align: center;
-            padding: 1rem 0;
-            background-color: #333;
-            color: #fff;
-        }
-
-        .image-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .image-grid img {
-            width: 300px;
-            height: 300px;
-            object-fit: cover;
-        }
-
-        /* Anchor Link Styling */
-        .anchor-link {
-            color: #ff6f61;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .anchor-link:hover {
-            text-decoration: underline;
-            /* Optional hover effect */
-        }
-    </style>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body>
@@ -140,46 +25,49 @@
     </header>
 
     <nav>
-        <a href="../">Home</a>
+        <a href="../index.html">Home</a>
         <a href="./about.html">About</a>
     </nav>
 
-    <section class="hero">
+    <section class="hero" id="home">
         <h2>Pixel Art Examples</h2>
         <p>Try these examples in your Pixel Art Journal Sketch Notebook</p>
+        <h3>Your PixelArt journal book contains grids of multiple sizes, choose the right one below:</h2>
+        <p><a href="#16pixel-samples" class="anchor-link">Go to 16 x 16 Pixel Grid Samples</a></p>
+        <p><a href="#32pixel-samples" class="anchor-link">Go to 32 x 32 Pixel Grid Samples</a></p>
         <h3>Don't have the book? Get it here</h3>
-        <a href="https://a.co/d/bhTTxZp" target="_blank">
-            <img src="images/pixelart_book.png" alt="Book Title" width="200" height="250">
-            <p>PIXEL ART JOURNAL: Sketch Notebook</p>
-        </a>
-        <h3>Remember that your PixelArt journal book contains grids of multiple sizes, choose the right one below:</h2>
-        <a href="#16pixel-samples" class="anchor-link">Go to 16 x 16 Pixel Grid Samples</a>
-        <a href="#32pixel-samples" class="anchor-link">Go to 32 x 32 Pixel Grid Samples</a>
-    </section>
-
-    <section class="hero">
-        <h2>Don't have the book? Get it here</h2>
-        <a href="https://a.co/d/bhTTxZp" target="_blank">
-            <img src="images/pixelart_book.png" alt="Book Title" width="100" height="150">
-            <p>PIXEL ART JOURNAL: Sketch Notebook</p>
-        </a>
+        <book>
+            <a href="https://a.co/d/bhTTxZp" target="_blank">
+                <img src="../images/pixelart_book.png" alt="Pixel Art Journal Book">
+            </a>
+        </book>
     </section>
 
     <section class="hero" id="16pixel-samples">
         <h2>16 x 16 pixel grid samples</h2>
         <p>Try these in your 16 x 16 pixel grids</p>
+        <p>
         <div class="image-grid">
             <img src="images/candyman.png" alt="Candy Man">
             <img src="images/froggy.png" alt="Candy Man">
         </div>
+        </p>
+        <p>
+            <a href="#home" class="anchor-link">Go back...</a>
+        </p>
     </section>
 
     <section class="hero" id="32pixel-samples">
         <h2>32 x 32 pixel grid samples</h2>
         <p>Try these in your 32 x 32 pixel grids</p>
+        <p>
         <div class="image-grid">
             <img src="images/byekitty.png" alt="Bye Kitty">
         </div>
+        </p>
+        <p>
+            <a href="#home" class="anchor-link">Go back...</a>
+        </p>
     </section>
 
     <footer>
