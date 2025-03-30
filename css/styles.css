@@ -115,16 +115,62 @@ book img:hover {
     transform: scale(1.05);
 }
 
-.image-grid {
+/* Updated responsive image grid */
+image-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    margin-bottom: 2rem;
 }
 
-.image-grid img {
+image-grid img {
+    object-fit: cover;
+}
+
+image-grid.pixels16 img {
     width: 300px;
     height: 300px;
-    object-fit: cover;
+}
+
+image-grid.pixels32 img {
+    width: 400px;
+    height: 400px;
+}
+
+image-grid.pixels64 img {
+    width: 300px;
+    height: 300px;
+}
+
+/* Media query for tablets */
+@media screen and (max-width: 1024px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .image-grid img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Media query for mobile phones */
+@media screen and (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .image-grid img {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    book img {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
 }
 
 footer {
